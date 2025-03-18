@@ -11,6 +11,7 @@ user_names = [user["name"]
               for user in data
               if user["region"] == "SE"
             ]  # list comprehension
+
 print(user_names)
 
 user_names = []
