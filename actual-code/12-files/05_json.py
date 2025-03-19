@@ -9,3 +9,4 @@ with open("data.json") as file:
     data = json.loads(file.read())
     print(data['name'])
 
+# pip install numpy pandas matplotlib
