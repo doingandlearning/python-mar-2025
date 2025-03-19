@@ -58,3 +58,11 @@ def test_adding_numbers_returns_valid_result(setup_and_teardown, a, b, expected_
 def test_raises_error_when_trying_to_add_strings():
     with pytest.raises(TypeError):
         add("1", "seven")
+
+import requests
+def test_api_response():
+    response = requests.get("https://swapi.dev/api/people/1")
+    data = response.json()
+    print(data)
+    assert response.status_code == 200
+    assert data["name"] == "Luke Skywalker"
